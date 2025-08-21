@@ -1,3 +1,7 @@
+package factory;
+
+import trees.TreeType;
+
 import java.util.HashMap;
 import java.util.Map;
 

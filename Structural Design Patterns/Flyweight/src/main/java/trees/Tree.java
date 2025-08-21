@@ -1,9 +1,10 @@
-package trash;
+package trees;
 
-// Контекстный класс
-class Tree {
+import interfaces.ITree;
+
+public class Tree implements ITree {
     private int x;
-    private int y;
+    private  int y;
     private TreeType type;
 
     public Tree(int x, int y, TreeType type) {
@@ -12,7 +13,8 @@ class Tree {
         this.type = type;
     }
 
+    @Override
     public void draw() {
-        type.draw(this.x, this.y);
+        type.draw(x,y);
     }
 }

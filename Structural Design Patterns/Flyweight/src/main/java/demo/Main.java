@@ -1,3 +1,9 @@
+package demo;
+
+import factory.TreeFactory;
+import trees.Tree;
+import trees.TreeType;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

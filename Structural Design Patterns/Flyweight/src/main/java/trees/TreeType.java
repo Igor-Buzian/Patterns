@@ -1,3 +1,5 @@
+package trees;
+
 public class TreeType {
     private String name;
     private String texture;
