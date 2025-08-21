@@ -1,7 +1,7 @@
 # Design Patterns Playground
 
 Навигация | Navigation:  
-[🇷🇺 Русский](#ru-русский) | [🇬🇧 English](#en-english)
+[🇷🇺 Русский](#ru-русский) | [en English](#en-english)
 
 ---
 
