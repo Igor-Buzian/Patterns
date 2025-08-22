@@ -1,16 +1,34 @@
+/**
+ * Базовый класс цепочки.
+ */
 public abstract class Middleware {
     private Middleware next;
 
-    public Middleware link(Middleware first, Middleware... chain) {
+    /**
+     * Помогает строить цепь из объектов-проверок.
+     */
+    public static Middleware link(Middleware first, Middleware... chain) {
         Middleware head = first;
-        for (Middleware next : chain) {
-        head =next
-
+        for (Middleware nextInChain: chain) {
+            head.next = nextInChain;
+            head = nextInChain;
         }
+        return first;
     }
 
-    public Middleware nextChain()
-    {
+    /**
+     * Подклассы реализуют в этом методе конкретные проверки.
+     */
+    public abstract boolean check(String email, String password);
 
+    /**
+     * Запускает проверку в следующем объекте или завершает проверку, если мы в
+     * последнем элементе цепи.
+     */
+    protected boolean checkNext(String email, String password) {
+        if (next == null) {
+            return true;
+        }
+        return next.check(email, password);
     }
 }
